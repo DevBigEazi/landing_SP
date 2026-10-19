@@ -2,11 +2,12 @@
 
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
-import { ArrowRight, Truck, Smartphone, Receipt, Users, Building2, Code2 } from "lucide-react";
+import { ArrowRight, Truck, Smartphone, Receipt, Users, Building2, Code2, Boxes } from "lucide-react";
 import { APP_BASE_URL } from "@/lib/config";
 
 export default function AboutPage() {
-  const salesBookUrl = `${APP_BASE_URL}/workspace?tab=pos`;
+  const salesBookUrl = `${APP_BASE_URL}/receipts/new`;
+  const inventoryUrl = `${APP_BASE_URL}/workspace?tab=inventory`;
   const shipmentsUrl = `${APP_BASE_URL}/shipments`;
   const teamUrl = `${APP_BASE_URL}/workspace?tab=team`;
 
@@ -18,16 +19,21 @@ export default function AboutPage() {
     },
     {
       num: "02",
+      title: "Multi-Branch Inventory & Stock Control",
+      desc: "Manage product catalogs, track stock per retail branch, and execute inter-branch transfers with unique transfer references. Counter checkouts auto-deplete store inventory in real time, and audit voids restore stock safely.",
+    },
+    {
+      num: "03",
       title: "Tracked Shipments & Scratch-Off Delivery Secrets",
       desc: "Dispatch retail deliveries and commercial packages with dual-layer QR shipping labels. Recipients unlock their deliveries using confidential scratch-off PIN verification, preventing dispatch rider theft or false delivery claims.",
     },
     {
-      num: "03",
+      num: "04",
       title: "Multi-Branch Operations & Team Roles",
       desc: "Collaborate seamlessly across multiple retail shops. Invite branch managers and sales reps via email with 6-digit PIN logins. Track sales rep performance per branch while keeping financial bookkeeping private.",
     },
     {
-      num: "04",
+      num: "05",
       title: "Permanent Audit Trails & Developer APIs",
       desc: "Every receipt issued, debtor settlement recorded, and package handover completed is certified with an immutable verification code. Integrate existing billing software, webhooks, and ERPs using Resit's REST API.",
     },
@@ -54,7 +60,7 @@ export default function AboutPage() {
               Modern Commerce Without Paper Waste
             </h1>
             <p className="text-sm sm:text-base lg:text-lg xl:text-xl 2xl:text-2xl text-slate-600 dark:text-slate-400 leading-relaxed">
-              Record sales, manage staff, and track shipments. Switch to Resit for smart QR receipts that bridge in-store purchases, delivery handovers, and multi-branch bookkeeping into one cohesive system.
+              Record sales, track inventory, manage staff, and verify shipments. Switch to Resit for smart QR receipts and multi-branch stock control that bridge in-store purchases, delivery handovers, and store bookkeeping into one cohesive system.
             </p>
           </div>
 
@@ -151,19 +157,35 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 xl:gap-8 text-xs sm:text-sm">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 xl:gap-8 text-xs sm:text-sm">
               <div className="space-y-2 bg-emerald-50/50 dark:bg-emerald-950/20 p-5 xl:p-8 rounded-xl xl:rounded-2xl border border-emerald-200/60 dark:border-emerald-900/60 flex flex-col justify-between">
                 <div>
                   <h4 className="font-bold text-slate-900 dark:text-white flex items-center gap-1.5 xl:gap-2 text-sm sm:text-base xl:text-xl">
                     <Receipt className="w-4 h-4 xl:w-5 xl:h-5 text-emerald-600 dark:text-emerald-400" /> Digital Sales Book
                   </h4>
                   <p className="text-xs sm:text-sm xl:text-base text-slate-600 dark:text-slate-400 leading-relaxed mt-1">
-                    Record counter sales, issue digital receipts, track debtors, and manage store branches.
+                    Record counter sales, issue digital receipts, and track debtors.
                   </p>
                 </div>
                 <div className="pt-3">
                   <a href={salesBookUrl} className="text-xs sm:text-sm xl:text-base font-bold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1">
                     <span>Open Sales Book</span> <ArrowRight className="w-3.5 h-3.5 xl:w-4 xl:h-4" />
+                  </a>
+                </div>
+              </div>
+
+              <div className="space-y-2 bg-teal-50/50 dark:bg-teal-950/20 p-5 xl:p-8 rounded-xl xl:rounded-2xl border border-teal-200/60 dark:border-teal-900/60 flex flex-col justify-between">
+                <div>
+                  <h4 className="font-bold text-slate-900 dark:text-white flex items-center gap-1.5 xl:gap-2 text-sm sm:text-base xl:text-xl">
+                    <Boxes className="w-4 h-4 xl:w-5 xl:h-5 text-teal-600 dark:text-teal-400" /> Multi-Branch Inventory
+                  </h4>
+                  <p className="text-xs sm:text-sm xl:text-base text-slate-600 dark:text-slate-400 leading-relaxed mt-1">
+                    Manage SKU catalogs, restock items, and transfer inventory between stores.
+                  </p>
+                </div>
+                <div className="pt-3">
+                  <a href={inventoryUrl} className="text-xs sm:text-sm xl:text-base font-bold text-teal-600 dark:text-teal-400 hover:underline flex items-center gap-1">
+                    <span>Manage Inventory</span> <ArrowRight className="w-3.5 h-3.5 xl:w-4 xl:h-4" />
                   </a>
                 </div>
               </div>
@@ -174,7 +196,7 @@ export default function AboutPage() {
                     <Truck className="w-4 h-4 xl:w-5 xl:h-5 text-indigo-600 dark:text-indigo-400" /> Package Tracking
                   </h4>
                   <p className="text-xs sm:text-sm xl:text-base text-slate-600 dark:text-slate-400 leading-relaxed mt-1">
-                    Dispatch commercial packages, print rider delivery manifests, and track chain of custody.
+                    Dispatch packages, print labels, and verify customer handover PINs.
                   </p>
                 </div>
                 <div className="pt-3">

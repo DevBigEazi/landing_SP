@@ -41,10 +41,10 @@ export default function PricingPage() {
               <span className="font-bold tracking-tight">Transparent Pricing</span>
             </div>
             <h1 className="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white font-display">
-                Dispatches, Receipts &amp; Multi-Branch Tiers
+                Dispatches, Receipts, Inventory &amp; Multi-Branch Tiers
             </h1>
             <p className="text-xs sm:text-sm lg:text-base xl:text-lg text-slate-600 dark:text-slate-400">
-              Unified operations counter for smart QR receipts and package dispatches. Includes branch management and team roles with {opsOverageFeeFormatted}/op and {branchStaffOverageFeeFormatted}/branch or rep universal overage.
+              Unified operations counter for smart QR receipts and package dispatches, paired with multi-branch inventory tracking, team roles, and transparent overage protection.
             </p>
           </div>
 
@@ -103,6 +103,17 @@ export default function PricingPage() {
 
                   {/* Feature Checklist */}
                   <div className="pt-3 border-t border-slate-100 dark:border-slate-800 space-y-3 xl:space-y-4 text-xs sm:text-sm xl:text-base">
+                    {/* SKU Catalog Limit */}
+                    <div className="flex items-start gap-2.5">
+                      <Check className="w-4 h-4 xl:w-5 xl:h-5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
+                      <div className="leading-tight">
+                        <span className="font-semibold text-slate-900 dark:text-white">{freeTier.skus} Inventory Items</span>
+                        <span className="block text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+                          Product catalog &amp; quick-pick presets
+                        </span>
+                      </div>
+                    </div>
+
                     {/* Branches */}
                     <div className="flex items-start gap-2.5">
                       <Check className="w-4 h-4 xl:w-5 xl:h-5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
@@ -231,6 +242,19 @@ export default function PricingPage() {
 
                   {/* Feature Checklist */}
                   <div className="pt-3 border-t border-slate-100 dark:border-slate-800 space-y-3 xl:space-y-4 text-xs sm:text-sm xl:text-base">
+                    {/* SKU Catalog Limit */}
+                    <div className="flex items-start gap-2.5">
+                      <Check className="w-4 h-4 xl:w-5 xl:h-5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
+                      <div className="leading-tight">
+                        <span className="font-semibold text-slate-900 dark:text-white">
+                          {growthTier.skus.toLocaleString()} Inventory Items
+                        </span>
+                        <span className="block text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+                          Multi-branch catalog &amp; real-time sales sync
+                        </span>
+                      </div>
+                    </div>
+
                     {/* Branches */}
                     <div className="flex items-start gap-2.5">
                       <Check className="w-4 h-4 xl:w-5 xl:h-5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
@@ -365,6 +389,19 @@ export default function PricingPage() {
 
                   {/* Feature Checklist */}
                   <div className="pt-3 border-t border-slate-100 dark:border-slate-800 space-y-3 xl:space-y-4 text-xs sm:text-sm xl:text-base">
+                    {/* SKU Catalog Limit */}
+                    <div className="flex items-start gap-2.5">
+                      <Check className="w-4 h-4 xl:w-5 xl:h-5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
+                      <div className="leading-tight">
+                        <span className="font-semibold text-slate-900 dark:text-white">
+                          {scaleTier.skus === 0 ? "Unlimited Inventory Items" : `${scaleTier.skus.toLocaleString()} Inventory Items`}
+                        </span>
+                        <span className="block text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+                          Multi-store replenishment &amp; stock transfers
+                        </span>
+                      </div>
+                    </div>
+
                     {/* Branches */}
                     <div className="flex items-start gap-2.5">
                       <Check className="w-4 h-4 xl:w-5 xl:h-5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
@@ -478,6 +515,13 @@ export default function PricingPage() {
                 <h4 className="font-bold text-slate-900 dark:text-white text-sm sm:text-base xl:text-lg">How do dispatches and receipts count toward my monthly quota?</h4>
                 <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
                   Both logistics shipments and sales book receipts share a unified monthly operations counter. For example, on the Starter tier (500 Ops), you can create 300 receipts and 200 dispatches. Any excess is billed at {opsOverageFeeFormatted} per unit.
+                </p>
+              </div>
+
+              <div className="space-y-2 xl:space-y-3">
+                <h4 className="font-bold text-slate-900 dark:text-white text-sm sm:text-base xl:text-lg">How does multi-branch inventory tracking and stock sync work?</h4>
+                <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                  Your product catalog tracks SKU quantities across all branches. When a cashier completes a digital receipt, matching inventory items auto-deplete in real time. Voiding an erroneous receipt automatically restores stock with an immutable audit log.
                 </p>
               </div>
 

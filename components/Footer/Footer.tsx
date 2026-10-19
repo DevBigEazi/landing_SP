@@ -62,8 +62,13 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5 text-xs xl:text-sm font-medium text-slate-600 dark:text-slate-400">
               <li>
-                <a href={`${APP_BASE_URL}/workspace?tab=pos`} className="hover:text-blue-600 dark:hover:text-white transition-colors flex items-center gap-1.5">
+                <a href={`${APP_BASE_URL}/receipts/new`} className="hover:text-blue-600 dark:hover:text-white transition-colors flex items-center gap-1.5">
                   <span>Digital Sales Book</span>
+                </a>
+              </li>
+              <li>
+                <a href={`${APP_BASE_URL}/workspace?tab=inventory`} className="hover:text-blue-600 dark:hover:text-white transition-colors">
+                  Multi-Branch Inventory &amp; Stock
                 </a>
               </li>
               <li>

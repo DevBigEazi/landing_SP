@@ -32,11 +32,11 @@ const STEPS: StepDetail[] = [
     id: 1,
     label: "Step 1",
     badge: "Digital Sales Book",
-    title: "Cashier Rings Up Sale in Seconds",
+    title: "Cashier Rings Up Sale & Depletes Stock",
     description:
-      "Enter item names, set quantities, and auto-calculate unit totals and tax directly from your phone, tablet, or laptop. No thermal printer required.",
+      "Select catalog items with instant autocomplete, auto-deplete store inventory in real-time, and calculate unit totals directly from your phone, tablet, or laptop.",
     actor: "Store Cashier / Sales Rep",
-    keyBenefit: "Zero paper rolls · Auto item totals · Role-based staff PIN",
+    keyBenefit: "Real-time stock sync · Zero paper rolls · Role-based staff PIN",
   },
   {
     id: 2,
@@ -182,7 +182,7 @@ export default function InteractiveFeatureFlow() {
 
               <div className="pt-2">
                 <a
-                  href={`${APP_BASE_URL}/workspace?tab=pos`}
+                  href={`${APP_BASE_URL}/receipts/new`}
                   className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs xl:text-sm px-4 py-2.5 xl:px-6 xl:py-3.5 rounded-xl transition-all shadow-2xs"
                 >
                   <Receipt className="w-3.5 h-3.5 xl:w-4 xl:h-4" />

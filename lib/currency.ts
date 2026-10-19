@@ -242,6 +242,7 @@ export interface PlanTierConfig {
   branches: number;
   salesReps: number;
   managers: number;
+  skus: number; // Max inventory items (0 = unlimited)
   description: string;
 }
 
@@ -254,7 +255,8 @@ export const PLAN_TIERS: Record<string, PlanTierConfig> = {
     branches: 0,
     salesReps: 0,
     managers: 0,
-    description: "CEO only · 100 dispatches & receipts",
+    skus: 25,
+    description: "CEO only · 25 items · 100 dispatches & receipts",
   },
   starter_500: {
     id: "starter_500",
@@ -264,7 +266,8 @@ export const PLAN_TIERS: Record<string, PlanTierConfig> = {
     branches: 1,
     salesReps: 1,
     managers: 1,
-    description: "1 branch · 1 sales rep · 1 manager · 500 dispatches & receipts",
+    skus: 150,
+    description: "1 branch · 150 items · 1 rep · 1 mgr · 500 dispatches & receipts",
   },
   growth_1000: {
     id: "growth_1000",
@@ -274,7 +277,8 @@ export const PLAN_TIERS: Record<string, PlanTierConfig> = {
     branches: 2,
     salesReps: 4,
     managers: 2,
-    description: "2 branches · 4 sales reps · 2 managers · 1,000 dispatches & receipts",
+    skus: 500,
+    description: "2 branches · 500 items · 4 reps · 2 mgrs · 1,000 dispatches & receipts",
   },
   business_2500: {
     id: "business_2500",
@@ -284,7 +288,8 @@ export const PLAN_TIERS: Record<string, PlanTierConfig> = {
     branches: 3,
     salesReps: 6,
     managers: 3,
-    description: "3 branches · 6 sales reps · 3 managers · 2,500 dispatches & receipts",
+    skus: 1500,
+    description: "3 branches · 1,500 items · 6 reps · 3 mgrs · 2,500 dispatches & receipts",
   },
   scale_5000: {
     id: "scale_5000",
@@ -294,7 +299,8 @@ export const PLAN_TIERS: Record<string, PlanTierConfig> = {
     branches: 5,
     salesReps: 10,
     managers: 5,
-    description: "5 branches · 10 sales reps · 5 managers · 5,000 dispatches & receipts",
+    skus: 0,
+    description: "5 branches · Unlimited items · 10 reps · 5 mgrs · 5,000 dispatches & receipts",
   },
 };
 

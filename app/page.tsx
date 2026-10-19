@@ -20,6 +20,7 @@ import {
   Smartphone,
   ShieldCheck,
   Code2,
+  Boxes,
 } from "lucide-react";
 
 export default function Home() {
@@ -29,7 +30,8 @@ export default function Home() {
     detectUserCurrency().then(setUserCurrency);
   }, []);
 
-  const salesBookUrl = `${APP_BASE_URL}/workspace?tab=pos`;
+  const salesBookUrl = `${APP_BASE_URL}/receipts/new`;
+  const inventoryUrl = `${APP_BASE_URL}/workspace?tab=inventory`;
   const shipmentsUrl = `${APP_BASE_URL}/shipments`;
   const workspaceUrl = `${APP_BASE_URL}/workspace`;
   const teamUrl = `${APP_BASE_URL}/workspace?tab=team`;
@@ -71,7 +73,7 @@ export default function Home() {
                 <span className="font-bold tracking-tight font-mono text-[10px] sm:text-[11px] xl:text-xs 2xl:text-sm uppercase text-center leading-normal flex flex-wrap justify-center items-center gap-x-1.5 xl:gap-x-2.5 gap-y-0.5">
                   <span>Smart QR Receipts</span>
                   <span className="text-blue-400/80 dark:text-blue-500/80">·</span>
-                  <span className="text-blue-900 dark:text-blue-100 font-extrabold">Digital Sales Book</span>
+                  <span className="text-blue-900 dark:text-blue-100 font-extrabold">Inventory &amp; Sales Book</span>
                   <span className="text-blue-400/80 dark:text-blue-500/80">·</span>
                   <span>Package Tracking</span>
                 </span>
@@ -79,12 +81,12 @@ export default function Home() {
 
               {/* Master Pitch Headline */}
               <h1 className="text-2xl sm:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-extrabold tracking-tight text-slate-900 dark:text-white font-display leading-[1.12] sm:leading-[1.08] xl:leading-[1.04] wrap-break-word">
-                Record sales, manage staff, and track shipments.
+                Record sales, track inventory, and verify shipments.
               </h1>
 
               {/* Sub-headline */}
               <p className="text-base sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-5xl mx-auto font-normal">
-                Switch to <span className="font-bold text-slate-900 dark:text-white">Resit</span> for smart QR receipts. Replace lost paper slips, unverified deliveries, and manual bookkeeping with verified digital proof for your store.
+                Switch to <span className="font-bold text-slate-900 dark:text-white">Resit</span> for smart QR receipts and multi-branch stock control. Replace lost paper slips, unverified deliveries, and manual stocktaking with verified digital records for your store.
               </p>
 
               {/* Action CTAs */}
@@ -95,6 +97,14 @@ export default function Home() {
                 >
                   <Receipt className="w-4 h-4 xl:w-5 xl:h-5 text-emerald-300" />
                   <span>Open Digital Sales Book</span>
+                </a>
+
+                <a
+                  href={inventoryUrl}
+                  className="w-full sm:w-auto bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white font-semibold rounded-2xl px-5 py-3.5 xl:px-7 xl:py-4.5 2xl:px-9 2xl:py-5 text-sm xl:text-base 2xl:text-lg transition-all shadow-2xs text-center flex items-center justify-center gap-2 xl:gap-2.5 cursor-pointer"
+                >
+                  <Boxes className="w-4 h-4 xl:w-5 xl:h-5 text-teal-600 dark:text-teal-400" />
+                  <span>Manage Inventory</span>
                 </a>
 
                 <a
@@ -156,39 +166,39 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 xl:gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-8">
               {/* Pillar 1: Smart QR Receipts & Digital Sales Book */}
-              <div className="bg-slate-50 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800 rounded-3xl p-5 sm:p-8 xl:p-10 2xl:p-12 space-y-5 xl:space-y-6 flex flex-col justify-between shadow-2xs hover:border-slate-300 dark:hover:border-slate-700 transition-all">
-                <div className="space-y-4 xl:space-y-5">
-                  <div className="w-11 h-11 xl:w-14 xl:h-14 2xl:w-16 2xl:h-16 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center text-emerald-600 dark:text-emerald-400 shadow-2xs">
-                    <Receipt className="w-6 h-6 xl:w-8 xl:h-8" />
+              <div className="bg-slate-50 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800 rounded-3xl p-5 sm:p-7 xl:p-8 space-y-5 flex flex-col justify-between shadow-2xs hover:border-slate-300 dark:hover:border-slate-700 transition-all">
+                <div className="space-y-4">
+                  <div className="w-11 h-11 xl:w-13 xl:h-13 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center text-emerald-600 dark:text-emerald-400 shadow-2xs">
+                    <Receipt className="w-6 h-6 xl:w-7 xl:h-7" />
                   </div>
                   <div>
-                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200/80 dark:border-emerald-800/60 text-[10px] sm:text-[11px] xl:text-xs 2xl:text-sm font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider">
+                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200/80 dark:border-emerald-800/60 text-[10px] sm:text-[11px] xl:text-xs font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider">
                       Digital Sales Book
                     </span>
-                    <h3 className="text-lg sm:text-xl xl:text-2xl 2xl:text-3xl font-bold text-slate-900 dark:text-white font-display mt-1.5">
+                    <h3 className="text-base sm:text-lg xl:text-xl font-bold text-slate-900 dark:text-white font-display mt-1.5">
                       Smart QR Receipts
                     </h3>
                   </div>
-                  <p className="text-xs sm:text-sm xl:text-base 2xl:text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-                    Build multi-item baskets in seconds on any phone or desktop. Issue instant digital receipts with scannable QR codes, record payment methods, and maintain debtor ledgers with partial repayments.
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                    Build baskets in seconds on any phone or PC. Issue scannable QR receipts, record payments, and maintain customer debtor ledgers.
                   </p>
-                  <ul className="space-y-2 xl:space-y-3 text-xs sm:text-sm xl:text-base 2xl:text-lg text-slate-600 dark:text-slate-400">
-                    <li className="flex items-center gap-2 xl:gap-2.5">
-                      <span className="h-1.5 w-1.5 xl:h-2 xl:w-2 rounded-full bg-emerald-600 shrink-0" />
-                      <span>Instant QR scan, PDF download &amp; WhatsApp share</span>
+                  <ul className="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-400">
+                    <li className="flex items-center gap-2">
+                      <span className="h-1.5 w-1.5 rounded-full bg-emerald-600 shrink-0" />
+                      <span>Instant QR scan &amp; PDF receipt download</span>
                     </li>
-                    <li className="flex items-center gap-2 xl:gap-2.5">
-                      <span className="h-1.5 w-1.5 xl:h-2 xl:w-2 rounded-full bg-emerald-600 shrink-0" />
-                      <span>Debtor balance tracking &amp; settlement history</span>
+                    <li className="flex items-center gap-2">
+                      <span className="h-1.5 w-1.5 rounded-full bg-emerald-600 shrink-0" />
+                      <span>Debtor balance &amp; partial settlement tracking</span>
                     </li>
-                    <li className="flex items-center gap-2 xl:gap-2.5">
-                      <span className="h-1.5 w-1.5 xl:h-2 xl:w-2 rounded-full bg-emerald-600 shrink-0" />
-                      <span>Catalog autocomplete &amp; quick-tap presets</span>
+                    <li className="flex items-center gap-2">
+                      <span className="h-1.5 w-1.5 rounded-full bg-emerald-600 shrink-0" />
+                      <span>Quick-pick item presets &amp; autocomplete</span>
                     </li>
-                    <li className="flex items-center gap-2 xl:gap-2.5">
-                      <span className="h-1.5 w-1.5 xl:h-2 xl:w-2 rounded-full bg-emerald-600 shrink-0" />
+                    <li className="flex items-center gap-2">
+                      <span className="h-1.5 w-1.5 rounded-full bg-emerald-600 shrink-0" />
                       <span>Audit-safe voiding with mandatory reasons</span>
                     </li>
                   </ul>
@@ -196,45 +206,91 @@ export default function Home() {
                 <div className="pt-4 border-t border-slate-200/80 dark:border-slate-800">
                   <a
                     href={salesBookUrl}
-                    className="text-xs sm:text-sm xl:text-base 2xl:text-lg font-bold text-emerald-600 dark:text-emerald-400 hover:underline inline-flex items-center gap-1"
+                    className="text-xs sm:text-sm font-bold text-emerald-600 dark:text-emerald-400 hover:underline inline-flex items-center gap-1"
                   >
                     Open Digital Sales Book →
                   </a>
                 </div>
               </div>
 
-              {/* Pillar 2: Tracked Shipments & Dispatch */}
-              <div className="bg-slate-50 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800 rounded-3xl p-5 sm:p-8 xl:p-10 2xl:p-12 space-y-5 xl:space-y-6 flex flex-col justify-between shadow-2xs hover:border-slate-300 dark:hover:border-slate-700 transition-all">
-                <div className="space-y-4 xl:space-y-5">
-                  <div className="w-11 h-11 xl:w-14 xl:h-14 2xl:w-16 2xl:h-16 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center text-blue-600 dark:text-blue-400 shadow-2xs">
-                    <Truck className="w-6 h-6 xl:w-8 xl:h-8" />
+              {/* Pillar 2: Multi-Branch Inventory & Stock Control */}
+              <div className="bg-slate-50 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800 rounded-3xl p-5 sm:p-7 xl:p-8 space-y-5 flex flex-col justify-between shadow-2xs hover:border-slate-300 dark:hover:border-slate-700 transition-all">
+                <div className="space-y-4">
+                  <div className="w-11 h-11 xl:w-13 xl:h-13 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center text-teal-600 dark:text-teal-400 shadow-2xs">
+                    <Boxes className="w-6 h-6 xl:w-7 xl:h-7" />
                   </div>
                   <div>
-                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-blue-50 dark:bg-blue-950/60 border border-blue-200/80 dark:border-blue-800/60 text-[10px] sm:text-[11px] xl:text-xs 2xl:text-sm font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider">
+                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-teal-50 dark:bg-teal-950/60 border border-teal-200/80 dark:border-teal-800/60 text-[10px] sm:text-[11px] xl:text-xs font-bold text-teal-700 dark:text-teal-400 uppercase tracking-wider">
+                      Stock Management
+                    </span>
+                    <h3 className="text-base sm:text-lg xl:text-xl font-bold text-slate-900 dark:text-white font-display mt-1.5">
+                      Multi-Branch Inventory
+                    </h3>
+                  </div>
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                    Track catalog SKUs and branch stock levels in real time. Counter checkouts auto-deplete inventory, and voided sales auto-restore stock.
+                  </p>
+                  <ul className="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-400">
+                    <li className="flex items-center gap-2">
+                      <span className="h-1.5 w-1.5 rounded-full bg-teal-600 shrink-0" />
+                      <span>Real-time sales register stock auto-depletion</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="h-1.5 w-1.5 rounded-full bg-teal-600 shrink-0" />
+                      <span>Inter-branch stock transfers with TRF reference</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="h-1.5 w-1.5 rounded-full bg-teal-600 shrink-0" />
+                      <span>Inbound supplier restocking &amp; audit adjustments</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="h-1.5 w-1.5 rounded-full bg-teal-600 shrink-0" />
+                      <span>Low-stock alerts &amp; branch-isolated stock lock</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="pt-4 border-t border-slate-200/80 dark:border-slate-800">
+                  <a
+                    href={inventoryUrl}
+                    className="text-xs sm:text-sm font-bold text-teal-600 dark:text-teal-400 hover:underline inline-flex items-center gap-1"
+                  >
+                    Manage Inventory →
+                  </a>
+                </div>
+              </div>
+
+              {/* Pillar 3: Tracked Shipments & Dispatch */}
+              <div className="bg-slate-50 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800 rounded-3xl p-5 sm:p-7 xl:p-8 space-y-5 flex flex-col justify-between shadow-2xs hover:border-slate-300 dark:hover:border-slate-700 transition-all">
+                <div className="space-y-4">
+                  <div className="w-11 h-11 xl:w-13 xl:h-13 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center text-blue-600 dark:text-blue-400 shadow-2xs">
+                    <Truck className="w-6 h-6 xl:w-7 xl:h-7" />
+                  </div>
+                  <div>
+                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-blue-50 dark:bg-blue-950/60 border border-blue-200/80 dark:border-blue-800/60 text-[10px] sm:text-[11px] xl:text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider">
                       Proof of Handover
                     </span>
-                    <h3 className="text-lg sm:text-xl xl:text-2xl 2xl:text-3xl font-bold text-slate-900 dark:text-white font-display mt-1.5">
+                    <h3 className="text-base sm:text-lg xl:text-xl font-bold text-slate-900 dark:text-white font-display mt-1.5">
                       Tracked Shipments &amp; Dispatch
                     </h3>
                   </div>
-                  <p className="text-xs sm:text-sm xl:text-base 2xl:text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-                    Connect delivery orders directly to tracked packages. Dual-layer QR labels and scratch-off recipient delivery PINs verify handovers without requiring buyers or dispatch riders to install apps.
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                    Connect delivery orders to tracked packages. Dual-layer QR labels and scratch-off PINs verify handovers without buyer app downloads.
                   </p>
-                  <ul className="space-y-2 xl:space-y-3 text-xs sm:text-sm xl:text-base 2xl:text-lg text-slate-600 dark:text-slate-400">
-                    <li className="flex items-center gap-2 xl:gap-2.5">
-                      <span className="h-1.5 w-1.5 xl:h-2 xl:w-2 rounded-full bg-blue-600 shrink-0" />
+                  <ul className="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-400">
+                    <li className="flex items-center gap-2">
+                      <span className="h-1.5 w-1.5 rounded-full bg-blue-600 shrink-0" />
                       <span>Secret scratch-off recipient handover PIN</span>
                     </li>
-                    <li className="flex items-center gap-2 xl:gap-2.5">
-                      <span className="h-1.5 w-1.5 xl:h-2 xl:w-2 rounded-full bg-blue-600 shrink-0" />
+                    <li className="flex items-center gap-2">
+                      <span className="h-1.5 w-1.5 rounded-full bg-blue-600 shrink-0" />
                       <span>Dispatch rider links with live custody status</span>
                     </li>
-                    <li className="flex items-center gap-2 xl:gap-2.5">
-                      <span className="h-1.5 w-1.5 xl:h-2 xl:w-2 rounded-full bg-blue-600 shrink-0" />
+                    <li className="flex items-center gap-2">
+                      <span className="h-1.5 w-1.5 rounded-full bg-blue-600 shrink-0" />
                       <span>Printable dual-layer QR dispatch labels</span>
                     </li>
-                    <li className="flex items-center gap-2 xl:gap-2.5">
-                      <span className="h-1.5 w-1.5 xl:h-2 xl:w-2 rounded-full bg-blue-600 shrink-0" />
+                    <li className="flex items-center gap-2">
+                      <span className="h-1.5 w-1.5 rounded-full bg-blue-600 shrink-0" />
                       <span>Automated delivery dispute protection</span>
                     </li>
                   </ul>
@@ -242,45 +298,45 @@ export default function Home() {
                 <div className="pt-4 border-t border-slate-200/80 dark:border-slate-800">
                   <a
                     href={shipmentsUrl}
-                    className="text-xs sm:text-sm xl:text-base 2xl:text-lg font-bold text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center gap-1"
+                    className="text-xs sm:text-sm font-bold text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center gap-1"
                   >
                     Open Shipments Hub →
                   </a>
                 </div>
               </div>
 
-              {/* Pillar 3: Staff & Multi-Branch Management */}
-              <div className="bg-slate-50 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800 rounded-3xl p-5 sm:p-8 xl:p-10 2xl:p-12 space-y-5 xl:space-y-6 flex flex-col justify-between shadow-2xs hover:border-slate-300 dark:hover:border-slate-700 transition-all">
-                <div className="space-y-4 xl:space-y-5">
-                  <div className="w-11 h-11 xl:w-14 xl:h-14 2xl:w-16 2xl:h-16 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center text-teal-600 dark:text-teal-400 shadow-2xs">
-                    <Users className="w-6 h-6 xl:w-8 xl:h-8" />
+              {/* Pillar 4: Staff & Multi-Branch Management */}
+              <div className="bg-slate-50 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800 rounded-3xl p-5 sm:p-7 xl:p-8 space-y-5 flex flex-col justify-between shadow-2xs hover:border-slate-300 dark:hover:border-slate-700 transition-all">
+                <div className="space-y-4">
+                  <div className="w-11 h-11 xl:w-13 xl:h-13 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-300 shadow-2xs">
+                    <Users className="w-6 h-6 xl:w-7 xl:h-7" />
                   </div>
                   <div>
-                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-teal-50 dark:bg-teal-950/60 border border-teal-200/80 dark:border-teal-800/60 text-[10px] sm:text-[11px] xl:text-xs 2xl:text-sm font-bold text-teal-600 dark:text-teal-400 uppercase tracking-wider">
+                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-[10px] sm:text-[11px] xl:text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider">
                       Multi-User Roles
                     </span>
-                    <h3 className="text-lg sm:text-xl xl:text-2xl 2xl:text-3xl font-bold text-slate-900 dark:text-white font-display mt-1.5">
+                    <h3 className="text-base sm:text-lg xl:text-xl font-bold text-slate-900 dark:text-white font-display mt-1.5">
                       Staff &amp; Branch Controls
                     </h3>
                   </div>
-                  <p className="text-xs sm:text-sm xl:text-base 2xl:text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-                    Scale from a single shop to multiple retail locations. Invite store managers and sales reps via email with secure 6-digit access PINs. Sales reps record sales while financial dashboards remain confidential.
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                    Scale across retail stores. Invite branch managers and sales reps via email with 6-digit PIN logins, keeping financial records confidential.
                   </p>
-                  <ul className="space-y-2 xl:space-y-3 text-xs sm:text-sm xl:text-base 2xl:text-lg text-slate-600 dark:text-slate-400">
-                    <li className="flex items-center gap-2 xl:gap-2.5">
-                      <span className="h-1.5 w-1.5 xl:h-2 xl:w-2 rounded-full bg-teal-600 shrink-0" />
+                  <ul className="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-400">
+                    <li className="flex items-center gap-2">
+                      <span className="h-1.5 w-1.5 rounded-full bg-slate-600 shrink-0" />
                       <span>Owner, Branch Manager &amp; Sales Rep roles</span>
                     </li>
-                    <li className="flex items-center gap-2 xl:gap-2.5">
-                      <span className="h-1.5 w-1.5 xl:h-2 xl:w-2 rounded-full bg-teal-600 shrink-0" />
+                    <li className="flex items-center gap-2">
+                      <span className="h-1.5 w-1.5 rounded-full bg-slate-600 shrink-0" />
                       <span>Multi-branch sales tracking &amp; staff tagging</span>
                     </li>
-                    <li className="flex items-center gap-2 xl:gap-2.5">
-                      <span className="h-1.5 w-1.5 xl:h-2 xl:w-2 rounded-full bg-teal-600 shrink-0" />
+                    <li className="flex items-center gap-2">
+                      <span className="h-1.5 w-1.5 rounded-full bg-slate-600 shrink-0" />
                       <span>Fast PIN logins without complex passwords</span>
                     </li>
-                    <li className="flex items-center gap-2 xl:gap-2.5">
-                      <span className="h-1.5 w-1.5 xl:h-2 xl:w-2 rounded-full bg-teal-600 shrink-0" />
+                    <li className="flex items-center gap-2">
+                      <span className="h-1.5 w-1.5 rounded-full bg-slate-600 shrink-0" />
                       <span>Permanent actor audit stamps on transactions</span>
                     </li>
                   </ul>
@@ -288,7 +344,7 @@ export default function Home() {
                 <div className="pt-4 border-t border-slate-200/80 dark:border-slate-800">
                   <a
                     href={teamUrl}
-                    className="text-xs sm:text-sm xl:text-base 2xl:text-lg font-bold text-teal-600 dark:text-teal-400 hover:underline inline-flex items-center gap-1"
+                    className="text-xs sm:text-sm font-bold text-slate-700 dark:text-slate-300 hover:underline inline-flex items-center gap-1"
                   >
                     Manage Team &amp; Branches →
                   </a>

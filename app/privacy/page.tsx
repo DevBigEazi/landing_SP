@@ -38,7 +38,7 @@ export default function PrivacyPolicyPage() {
                   Our Privacy Architecture
                 </h2>
                 <p className="text-sm sm:text-base xl:text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-                  Resit is architected from the ground up as a privacy-first platform. We believe store financial records, customer receipt details, and shipment custody coordinates must never be unnecessarily exposed or monetized.
+                  SellerPadi is architected from the ground up as a privacy-first platform. We believe store financial records, customer receipt details, and shipment custody coordinates must never be unnecessarily exposed or monetized.
                 </p>
               </div>
             </div>
@@ -73,8 +73,8 @@ export default function PrivacyPolicyPage() {
               <p className="font-semibold text-slate-900 dark:text-white">Notice</p>
               <p>
                 Our finalized legal terms and comprehensive data protection agreements are undergoing dual-jurisdiction legal certification. For immediate privacy inquiries or data requests, contact{" "}
-                <a href="mailto:support@resit.xyz" className="text-blue-600 dark:text-blue-400 underline font-medium">
-                  support@resit.xyz
+                <a href="mailto:support@SellerPadi.xyz" className="text-blue-600 dark:text-blue-400 underline font-medium">
+                  support@SellerPadi.xyz
                 </a>.
               </p>
             </div>

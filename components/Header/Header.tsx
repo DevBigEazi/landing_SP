@@ -37,7 +37,7 @@ export default function Header() {
               <Link href="/" className="flex items-center space-x-2.5 group">
                 <Image
                   src="/logo-icon.svg"
-                  alt="Resit Logo"
+                  alt="SellerPadi Logo"
                   width={40}
                   height={40}
                   style={{ width: "auto" }}
@@ -46,11 +46,11 @@ export default function Header() {
                 />
                 <Image
                   src="/logo-full.svg"
-                  alt="Resit Logo"
-                  width={460}
-                  height={90}
+                  alt="SellerPadi Logo"
+                  width={152}
+                  height={25}
                   style={{ width: "auto" }}
-                  className="h-8 sm:h-9 lg:h-10 xl:h-11 2xl:h-12 w-auto shrink-0 hidden sm:block object-contain"
+                  className="h-7 sm:h-8 lg:h-9 w-auto shrink-0 hidden sm:block object-contain"
                   priority
                 />
               </Link>

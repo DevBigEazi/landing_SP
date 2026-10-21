@@ -30,7 +30,10 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#0F172A",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#F8FAFC" },
+    { media: "(prefers-color-scheme: dark)", color: "#0B1220" },
+  ],
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
@@ -43,11 +46,11 @@ const metadataBase = getMetadataBaseUrl();
 export const metadata: Metadata = {
   metadataBase,
   title: {
-    default: "Resit — Record Sales, Manage Staff & Track Shipments",
-    template: "%s | Resit",
+    default: "SellerPadi — Record Sales, Manage Staff & Track Shipments",
+    template: "%s | SellerPadi",
   },
   description:
-    "Record sales, manage staff, and track shipments. Switch to Resit for smart QR receipts, digital sales books, debtor ledgers, and scratch-off PIN package tracking.",
+    "Record sales, manage staff, and track shipments. Switch to SellerPadi for smart QR receipts, digital sales books, debtor ledgers, and scratch-off PIN package tracking.",
   keywords: [
     "smart QR receipts",
     "digital sales book",
@@ -59,21 +62,21 @@ export const metadata: Metadata = {
     "developer REST API",
     "Electroneum",
   ],
-  authors: [{ name: "Resit" }],
-  creator: "Resit",
-  publisher: "Resit",
+  authors: [{ name: "SellerPadi" }],
+  creator: "SellerPadi",
+  publisher: "SellerPadi",
   openGraph: {
     ...sharedOpenGraph,
-    title: "Resit — Record Sales, Manage Staff & Track Shipments",
+    title: "SellerPadi — Record Sales, Manage Staff & Track Shipments",
     description:
-      "Record sales, manage staff, and track shipments. Switch to Resit for smart QR receipts, digital sales books, and package tracking.",
+      "Record sales, manage staff, and track shipments. Switch to SellerPadi for smart QR receipts, digital sales books, and package tracking.",
     url: metadataBase.origin,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Resit — Record Sales, Manage Staff & Track Shipments",
+    title: "SellerPadi — Record Sales, Manage Staff & Track Shipments",
     description:
-      "Record sales, manage staff, and track shipments. Switch to Resit for smart QR receipts.",
+      "Record sales, manage staff, and track shipments. Switch to SellerPadi for smart QR receipts.",
     images: ["/og-image.png"],
   },
   icons: {
@@ -99,7 +102,7 @@ export default function RootLayout({
           id="theme-init"
           strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
-            __html: `try{var t=localStorage.getItem("resit_theme");var d=t==="dark"||(t!=="light"&&window.matchMedia("(prefers-color-scheme: dark)").matches);if(d){document.documentElement.classList.add("dark");document.documentElement.style.colorScheme="dark";}else{document.documentElement.classList.remove("dark");document.documentElement.style.colorScheme="light";}}catch(e){}`,
+            __html: `try{var t=localStorage.getItem("sellerpadi_theme");var d=t==="dark"||(t!=="light"&&window.matchMedia("(prefers-color-scheme: dark)").matches);if(d){document.documentElement.classList.add("dark");document.documentElement.style.colorScheme="dark";}else{document.documentElement.classList.remove("dark");document.documentElement.style.colorScheme="light";}}catch(e){}`,
           }}
         />
       </head>

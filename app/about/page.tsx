@@ -15,7 +15,7 @@ export default function AboutPage() {
     {
       num: "01",
       title: "Fast Mobile Sales & Smart QR Receipts",
-      desc: "Record customer sales in seconds from any smartphone or tablet. Resit replaces fragile paper receipt printers with tamperproof digital receipts featuring scannable QR codes, payment tracking, and debtor ledgers.",
+      desc: "Record customer sales in seconds from any smartphone or tablet. SellerPadi replaces fragile paper receipt printers with tamperproof digital receipts featuring scannable QR codes, payment tracking, and debtor ledgers.",
     },
     {
       num: "02",
@@ -35,7 +35,7 @@ export default function AboutPage() {
     {
       num: "05",
       title: "Permanent Audit Trails & Developer APIs",
-      desc: "Every receipt issued, debtor settlement recorded, and package handover completed is certified with an immutable verification code. Integrate existing billing software, webhooks, and ERPs using Resit's REST API.",
+      desc: "Every receipt issued, debtor settlement recorded, and package handover completed is certified with an immutable verification code. Integrate existing billing software, webhooks, and ERPs using SellerPadi's REST API.",
     },
   ];
 
@@ -53,14 +53,14 @@ export default function AboutPage() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 xl:h-2.5 xl:w-2.5 bg-emerald-600"></span>
               </span>
-              <span className="font-bold tracking-tight">About Resit</span>
+              <span className="font-bold tracking-tight">About SellerPadi</span>
             </div>
 
             <h1 className="text-3xl sm:text-5xl xl:text-6xl 2xl:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white font-display">
               Modern Commerce Without Paper Waste
             </h1>
             <p className="text-sm sm:text-base lg:text-lg xl:text-xl 2xl:text-2xl text-slate-600 dark:text-slate-400 leading-relaxed">
-              Record sales, track inventory, manage staff, and verify shipments. Switch to Resit for smart QR receipts and multi-branch stock control that bridge in-store purchases, delivery handovers, and store bookkeeping into one cohesive system.
+              Record sales, track inventory, manage staff, and verify shipments. Switch to SellerPadi for smart QR receipts and multi-branch stock control that bridge in-store purchases, delivery handovers, and store bookkeeping into one cohesive system.
             </p>
           </div>
 
@@ -142,7 +142,7 @@ export default function AboutPage() {
                   <Code2 className="w-4 h-4 xl:w-5 xl:h-5 text-blue-600 dark:text-blue-400" /> Developer REST API
                 </h4>
                 <p className="text-slate-600 dark:text-slate-400">
-                  Connect Resit directly to custom e-commerce checkouts, billing systems, or dispatch fleets via simple REST endpoints.
+                  Connect SellerPadi directly to custom e-commerce checkouts, billing systems, or dispatch fleets via simple REST endpoints.
                 </p>
               </div>
             </div>
@@ -151,7 +151,7 @@ export default function AboutPage() {
           {/* Quick Action Pathways */}
           <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl xl:rounded-3xl p-6 sm:p-10 xl:p-12 2xl:p-16 shadow-2xs space-y-5 xl:space-y-8">
             <div className="border-b border-slate-100 dark:border-slate-800 pb-4 xl:pb-6">
-              <h2 className="text-xl sm:text-2xl xl:text-3xl 2xl:text-4xl font-bold text-slate-900 dark:text-white font-display">Get Started with Resit</h2>
+              <h2 className="text-xl sm:text-2xl xl:text-3xl 2xl:text-4xl font-bold text-slate-900 dark:text-white font-display">Get Started with SellerPadi</h2>
               <p className="text-xs sm:text-sm xl:text-base 2xl:text-lg text-slate-500 dark:text-slate-400 mt-1">
                 Choose the workflow that fits your business needs today.
               </p>

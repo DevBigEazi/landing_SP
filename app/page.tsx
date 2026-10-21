@@ -86,7 +86,7 @@ export default function Home() {
 
               {/* Sub-headline */}
               <p className="text-base sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-5xl mx-auto font-normal">
-                Switch to <span className="font-bold text-slate-900 dark:text-white">Resit</span> for smart QR receipts and multi-branch stock control. Replace lost paper slips, unverified deliveries, and manual stocktaking with verified digital records for your store.
+                Switch to <span className="font-bold text-slate-900 dark:text-white">SellerPadi</span> for smart QR receipts and multi-branch stock control. Replace lost paper slips, unverified deliveries, and manual stocktaking with verified digital records for your store.
               </p>
 
               {/* Action CTAs */}
@@ -362,7 +362,7 @@ export default function Home() {
                   From Countertop to Customer Doorstep
                 </h3>
                 <p className="text-xs sm:text-sm lg:text-base xl:text-lg 2xl:text-xl text-slate-600 dark:text-slate-400">
-                  Resit bridges physical store counters and parcel deliveries with tamperproof digital verification.
+                  SellerPadi bridges physical store counters and parcel deliveries with tamperproof digital verification.
                 </p>
               </div>
 
@@ -449,7 +449,7 @@ export default function Home() {
                 Built for High Trust, Speed and Simplicity
               </h2>
               <p className="text-xs sm:text-sm lg:text-base xl:text-lg 2xl:text-xl text-slate-600 dark:text-slate-400">
-                Resit removes the friction of old commerce software with zero app requirements and transparent operational quotas.
+                SellerPadi removes the friction of old commerce software with zero app requirements and transparent operational quotas.
               </p>
             </div>
 

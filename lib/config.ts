@@ -1,12 +1,12 @@
 export const LANDING_BASE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL || "https://landing-resit.vercel.app"
+  process.env.NEXT_PUBLIC_SITE_URL || "https://landing-SellerPadi.vercel.app"
 ).replace(/\/$/, "");
 
 export const APP_BASE_URL = (
   process.env.NEXT_PUBLIC_APP_URL ||
   (process.env.NODE_ENV === "development"
     ? "http://localhost:3000"
-    : "https://app-resit.vercel.app")
+    : "https://app-SellerPadi.vercel.app")
 ).replace(/\/$/, "");
 
 export const isTestnet =

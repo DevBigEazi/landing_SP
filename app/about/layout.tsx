@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import { sharedOpenGraph } from "@/lib/metadata";
 
 export const metadata: Metadata = {
-  title: "About Resit — Smart QR Receipts & Logistics Tracking",
+  title: "About SellerPadi — Smart QR Receipts & Logistics Tracking",
   description:
-    "Learn how Resit combines smart QR receipts, digital sales registers, and tamperproof package dispatches to empower modern commerce.",
+    "Learn how SellerPadi combines smart QR receipts, digital sales registers, and tamperproof package dispatches to empower modern commerce.",
   openGraph: {
     ...sharedOpenGraph,
-    title: "About Resit — Smart QR Receipts & Logistics Tracking | Resit",
+    title: "About SellerPadi — Smart QR Receipts & Logistics Tracking | SellerPadi",
     description:
-      "Learn how Resit combines smart QR receipts, digital sales registers, and tamperproof package dispatches.",
+      "Learn how SellerPadi combines smart QR receipts, digital sales registers, and tamperproof package dispatches.",
     url: "/about",
   },
 };

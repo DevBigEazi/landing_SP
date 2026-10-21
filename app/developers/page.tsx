@@ -16,7 +16,7 @@ export default function DevelopersPage() {
       icon: <UserPlus className="w-5 h-5 xl:w-6 xl:h-6 text-blue-600 dark:text-blue-400" />,
       title: "Create a Merchant Account",
       description:
-        "Sign up on Resit using Google or Email or Phone. During profile setup, select your merchant business type to unlock the shipments and smart receipts workspace.",
+        "Sign up on SellerPadi using Google or Email or Phone. During profile setup, select your merchant business type to unlock the shipments and smart receipts workspace.",
       action: "Sign Up as Merchant →",
       actionHref: `${APP_BASE_URL}/workspace`,
       isExternal: true,
@@ -76,7 +76,7 @@ export default function DevelopersPage() {
             </div>
 
             <h1 className="text-3xl sm:text-5xl xl:text-6xl 2xl:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white font-display">
-              Integrate Resit Dispatches &amp; Receipts
+              Integrate SellerPadi Dispatches &amp; Receipts
             </h1>
 
             <p className="text-sm sm:text-base lg:text-lg xl:text-xl 2xl:text-2xl text-slate-600 dark:text-slate-400 leading-relaxed">

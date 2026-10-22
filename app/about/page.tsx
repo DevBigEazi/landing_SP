@@ -24,8 +24,8 @@ export default function AboutPage() {
     },
     {
       num: "03",
-      title: "Tracked Shipments & Scratch-Off Delivery Secrets",
-      desc: "Dispatch retail deliveries and commercial packages with dual-layer QR shipping labels. Recipients unlock their deliveries using confidential scratch-off PIN verification, preventing dispatch rider theft or false delivery claims.",
+      title: "Tracked Shipments & Branded Dispatch Stickers",
+      desc: "Dispatch retail deliveries with branded custom stickers and dual-layer QR shipping labels. Direct WhatsApp and Facebook QRs drive repeat customer orders, while confidential scratch-off PIN verification prevents dispatch rider theft or false delivery claims.",
     },
     {
       num: "04",

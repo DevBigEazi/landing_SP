@@ -595,7 +595,7 @@ export default function ApiSandboxConsole() {
                         src={
                           (respObj?.qrImageUrl as string) ||
                           `https://api.qrserver.com/v1/create-qr-code/?size=150x150&margin=10&data=${encodeURIComponent(
-                            `https://SellerPadi.co/scan/${reqParamId}`
+                            `https://sellerpadi.com/scan/${reqParamId}`
                           )}`
                         }
                         alt="Generated Package QR Code"
@@ -609,14 +609,14 @@ export default function ApiSandboxConsole() {
                           Scan URL:{" "}
                           <code className="text-emerald-400 font-mono font-normal">
                             {(respObj?.scanUrl as string) ||
-                              `https://SellerPadi.co/scan/${reqParamId}`}
+                              `https://sellerpadi.com/scan/${reqParamId}`}
                           </code>
                         </p>
                         <a
                           href={
                             (respObj?.qrImageUrl as string) ||
                             `https://api.qrserver.com/v1/create-qr-code/?size=300x300&margin=10&data=${encodeURIComponent(
-                              `https://SellerPadi.co/scan/${reqParamId}`
+                              `https://sellerpadi.com/scan/${reqParamId}`
                             )}`
                           }
                           target="_blank"

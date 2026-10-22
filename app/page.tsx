@@ -279,15 +279,15 @@ export default function Home() {
                   <ul className="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-400">
                     <li className="flex items-center gap-2">
                       <span className="h-1.5 w-1.5 rounded-full bg-blue-600 shrink-0" />
-                      <span>Secret scratch-off recipient handover PIN</span>
+                      <span>Custom dispatch stickers with WhatsApp &amp; Facebook QRs</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="h-1.5 w-1.5 rounded-full bg-blue-600 shrink-0" />
+                      <span>10-up A4 batch sheet printing &amp; scratch-off PIN labels</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <span className="h-1.5 w-1.5 rounded-full bg-blue-600 shrink-0" />
                       <span>Dispatch rider links with live custody status</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="h-1.5 w-1.5 rounded-full bg-blue-600 shrink-0" />
-                      <span>Printable dual-layer QR dispatch labels</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <span className="h-1.5 w-1.5 rounded-full bg-blue-600 shrink-0" />
@@ -419,11 +419,11 @@ export default function Home() {
                         Logistics Protection
                       </span>
                       <h4 className="text-base sm:text-lg xl:text-2xl 2xl:text-3xl font-bold text-slate-900 dark:text-white font-display wrap-break-word">
-                        Physical QR Labels. Secret Handover PINs.
+                        Branded Dispatch Stickers. Secret Handover PINs.
                       </h4>
                     </div>
                     <p className="text-xs sm:text-sm xl:text-base 2xl:text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-                      Affix dual-layer QR shipping labels to parcel boxes and poly-mailers. Recipients verify delivery using their confidential scratch-off PIN, completely eliminating false delivery disputes.
+                      Affix custom branded retail stickers and dual-layer QR labels to packages. Customers re-order instantly via direct WhatsApp &amp; Facebook QRs, while secret scratch-off PINs eliminate delivery disputes.
                     </p>
                     <div className="pt-2">
                       <a

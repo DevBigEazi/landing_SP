@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     "multi-branch store management",
     "debtor tracking",
     "developer REST API",
-    "Electroneum",
+    "Avalanche",
   ],
   authors: [{ name: "SellerPadi" }],
   creator: "SellerPadi",

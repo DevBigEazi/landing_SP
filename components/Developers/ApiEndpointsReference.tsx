@@ -84,7 +84,7 @@ export default function ApiEndpointsReference() {
 
           <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
             Registers a new commercial shipment, reserves your monthly quota, writes a tamper-proof record to the
-            Electroneum blockchain, and returns a unique packageId, trackingCode, RST-prefixed handover secret
+            Avalanche C-Chain, and returns a unique packageId, trackingCode, RST-prefixed handover secret
             (innerSecret), and shipment object.
           </p>
 

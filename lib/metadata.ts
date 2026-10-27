@@ -1,11 +1,11 @@
 export const sharedOpenGraph = {
-  siteName: "Resit",
+  siteName: "SellerPadi",
   images: [
     {
       url: "/og-image.png",
       width: 1200,
       height: 630,
-      alt: "Resit — Record sales, manage staff, and track shipments with smart QR receipts",
+      alt: "SellerPadi — Record sales, manage staff, and track shipments with smart QR receipts",
     },
   ],
   locale: "en_US",
@@ -18,6 +18,6 @@ export function getMetadataBaseUrl(): URL {
   try {
     return new URL(LANDING_BASE_URL);
   } catch {
-    return new URL("https://app-resit.vercel.app");
+    return new URL("https://app-SellerPadi.vercel.app");
   }
 }

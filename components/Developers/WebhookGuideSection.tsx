@@ -80,7 +80,7 @@ export default function WebhookGuideSection() {
             <h4 className="font-bold text-slate-900 dark:text-white text-base">Supported Event Types:</h4>
             <ul className="space-y-2">
               <li className="flex items-center gap-2 bg-slate-50 dark:bg-slate-800/60 p-2 rounded-lg border border-slate-200 dark:border-slate-700">
-                <span className="font-mono font-bold text-blue-600 dark:text-blue-400 text-xs shrink-0">resit.ping</span>
+                <span className="font-mono font-bold text-blue-600 dark:text-blue-400 text-xs shrink-0">SellerPadi.ping</span>
                 <span className="text-xs text-slate-600 dark:text-slate-400">— Connectivity &amp; latency test ping</span>
               </li>
               <li className="flex items-center gap-2 bg-slate-50 dark:bg-slate-800/60 p-2 rounded-lg border border-slate-200 dark:border-slate-700">

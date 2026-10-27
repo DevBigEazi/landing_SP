@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Electric Blue Symbol with Safe-Zone Padding -->
+  <g transform="translate(8, 6)">
+    <path d="M33.13 25.11Q34.95 25.98 36.49 27.51Q40 31.03 40 36Q40 40.97 36.49 44.49Q32.97 48 28 48H8V40H28Q32 40 32 36Q32 32 28 32H20Q19.69 32 19.38 31.99ZM38 16H20Q16 16 16 20Q16 24 20 24H28Q28.31 24 28.62 24.01L14.87 30.89Q13.05 30.02 11.51 28.49Q8 24.97 8 20Q8 15.03 11.51 11.51Q15.03 8 20 8H34L38 4Z" fill="#155EEF"/>
+  </g>
+</svg>

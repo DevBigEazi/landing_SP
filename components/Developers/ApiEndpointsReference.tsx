@@ -62,7 +62,7 @@ export default function ApiEndpointsReference() {
           <p className="text-xs text-slate-600 dark:text-slate-400 mt-1">
             Base URL:{" "}
             <code className="bg-slate-900 text-emerald-400 font-mono px-2 py-0.5 rounded text-xs">
-              https://resit.co/api/v1
+              https://sellerpadi.com/api/v1
             </code>
           </p>
         </div>
@@ -84,7 +84,7 @@ export default function ApiEndpointsReference() {
 
           <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
             Registers a new commercial shipment, reserves your monthly quota, writes a tamper-proof record to the
-            Electroneum blockchain, and returns a unique packageId, trackingCode, RST-prefixed handover secret
+            blockchain ledger, and returns a unique packageId, trackingCode, SP-prefixed handover secret
             (innerSecret), and shipment object.
           </p>
 
@@ -117,11 +117,11 @@ export default function ApiEndpointsReference() {
               <ul className="space-y-1 text-slate-600 dark:text-slate-400 font-mono">
                 <li>• <strong className="text-emerald-600">success</strong>: true</li>
                 <li>• <strong className="text-emerald-600">packageId</strong>: &quot;0x4a91b2...&quot; (internal package ID)</li>
-                <li>• <strong className="text-emerald-600">trackingCode</strong>: &quot;RST-4A91B2C3E8F0&quot; (consumer tracking code)</li>
-                <li>• <strong className="text-emerald-600">scanUrl</strong>: &quot;https://resit.co/scan/RST-4A91B2C3E8F0&quot;</li>
+                <li>• <strong className="text-emerald-600">trackingCode</strong>: &quot;SHPT-4A91B2C3E8F0&quot; (consumer tracking code)</li>
+                <li>• <strong className="text-emerald-600">scanUrl</strong>: &quot;https://sellerpadi.com/scan/SHPT-4A91B2C3E8F0&quot;</li>
                 <li>• <strong className="text-emerald-600">qrImageUrl</strong>: &quot;https://api.qrserver.com/...&quot; (ready-to-print PNG link)</li>
-                <li>• <strong className="text-emerald-600">qrApiUrl</strong>: &quot;https://resit.co/api/v1/shipments/RST-4A91B2C3E8F0/qr&quot;</li>
-                <li>• <strong className="text-emerald-600">innerSecret</strong>: &quot;RST-A8F2B1C0&quot; (8-char handover secret)</li>
+                <li>• <strong className="text-emerald-600">qrApiUrl</strong>: &quot;https://sellerpadi.com/api/v1/shipments/SHPT-4A91B2C3E8F0/qr&quot;</li>
+                <li>• <strong className="text-emerald-600">innerSecret</strong>: &quot;SP-A8F2B1C0&quot; (8-char handover secret)</li>
                 <li>• <strong className="text-emerald-600">shipment</strong>: Full Shipment Object</li>
               </ul>
             </div>

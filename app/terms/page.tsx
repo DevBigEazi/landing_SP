@@ -38,7 +38,7 @@ export default function TermsOfServicePage() {
                   Platform Terms &amp; Conditions
                 </h2>
                 <p className="text-sm sm:text-base xl:text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-                  These Terms govern the use of Resit&apos;s digital sales receipts, store branch management, and commercial shipment custody tracking infrastructure.
+                  These Terms govern the use of SellerPadi&apos;s digital sales receipts, store branch management, and commercial shipment custody tracking infrastructure.
                 </p>
               </div>
             </div>
@@ -73,8 +73,8 @@ export default function TermsOfServicePage() {
               <p className="font-semibold text-slate-900 dark:text-white">Notice</p>
               <p>
                 Our comprehensive merchant agreements, consumer terms of use, and API developer terms of service are currently undergoing legal completion. For enterprise contract inquiries or legal notices, contact{" "}
-                <a href="mailto:support@resit.xyz" className="text-blue-600 dark:text-blue-400 underline font-medium">
-                  support@resit.xyz
+                <a href="mailto:support@SellerPadi.xyz" className="text-blue-600 dark:text-blue-400 underline font-medium">
+                  support@SellerPadi.xyz
                 </a>.
               </p>
             </div>

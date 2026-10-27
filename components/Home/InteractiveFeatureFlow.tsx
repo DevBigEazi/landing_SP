@@ -162,7 +162,7 @@ export default function InteractiveFeatureFlow() {
             {/* Left: Explanation */}
             <div className="md:col-span-6 space-y-4">
               <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                Open Resit Sales Book on any web browser or phone. Staff enter items with unit counts and prices. Resit automatically tallies line items, applies taxes, and attributes the transaction to the active staff PIN.
+                Open SellerPadi Sales Book on any web browser or phone. Staff enter items with unit counts and prices. SellerPadi automatically tallies line items, applies taxes, and attributes the transaction to the active staff PIN.
               </p>
 
               <div className="space-y-2.5 text-xs text-slate-600 dark:text-slate-400">
@@ -195,7 +195,7 @@ export default function InteractiveFeatureFlow() {
             <div className="md:col-span-6 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-2xl p-3.5 sm:p-5 space-y-3 font-mono text-xs overflow-hidden">
               <div className="flex flex-wrap items-center justify-between gap-1 pb-2 border-b border-slate-200 dark:border-slate-800 text-[10px] sm:text-[11px] text-slate-500">
                 <span className="flex items-center gap-1.5 font-bold text-slate-700 dark:text-slate-300 truncate">
-                  <Laptop className="w-3.5 h-3.5 text-blue-600 shrink-0" /> RESIT SALES BOOK · ACTIVE SALE
+                  <Laptop className="w-3.5 h-3.5 text-blue-600 shrink-0" /> SellerPadi SALES BOOK · ACTIVE SALE
                 </span>
                 <span className="text-emerald-600 dark:text-emerald-400 font-bold shrink-0">STAFF #04</span>
               </div>
@@ -289,7 +289,7 @@ export default function InteractiveFeatureFlow() {
 
               <div className="text-xs text-slate-600 dark:text-slate-400 space-y-1">
                 <p className="font-bold text-slate-900 dark:text-white">
-                  Slip #RST-84920 · Apex Electronics Store
+                  Slip #SP-REC-84920 · Apex Electronics Store
                 </p>
                 <p className="text-[11px] font-mono text-emerald-600 dark:text-emerald-400">
                   Status: Paid in Full · Immutable Sale Proof
@@ -304,7 +304,7 @@ export default function InteractiveFeatureFlow() {
             {/* Left: Explanation */}
             <div className="md:col-span-6 space-y-4">
               <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                Resit provides two layers of commercial security: tamperproof sale records that cashiers cannot secretly delete, plus dual-layer QR shipping labels with scratch-off handover PINs for parcels dispatched to buyers.
+                SellerPadi provides two layers of commercial security: tamperproof sale records that cashiers cannot secretly delete, plus dual-layer QR shipping labels with scratch-off handover PINs for parcels dispatched to buyers.
               </p>
 
               <div className="space-y-2.5 text-xs text-slate-600 dark:text-slate-400">

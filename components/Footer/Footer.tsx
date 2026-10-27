@@ -24,11 +24,11 @@ export default function Footer() {
             <Link href="/" className="shrink-0 flex items-center group">
               <Image
                 src="/logo-full.svg"
-                alt="Resit Logo"
-                width={460}
-                height={90}
+                alt="SellerPadi Logo"
+                width={152}
+                height={25}
                 style={{ width: "auto" }}
-                className="h-8 sm:h-9 lg:h-10 xl:h-11 2xl:h-12 w-auto object-contain shrink-0 group-hover:scale-105 transition-transform"
+                className="h-7 sm:h-8 lg:h-9 w-auto object-contain shrink-0 group-hover:scale-105 transition-transform"
               />
             </Link>
           </div>
@@ -138,7 +138,7 @@ export default function Footer() {
             <ul className="space-y-2.5 text-xs xl:text-sm font-medium text-slate-600 dark:text-slate-400">
               <li>
                 <Link href="/about" className="hover:text-blue-600 dark:hover:text-white transition-colors">
-                  About Resit Protocol
+                  About SellerPadi Protocol
                 </Link>
               </li>
               <li>
@@ -173,8 +173,8 @@ export default function Footer() {
             <div className="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 space-y-3 shadow-xs">
               <div className="flex items-center gap-3">
                 <Image
-                  src="/ETN.png"
-                  alt="Electroneum Logo"
+                  src="/avax.svg"
+                  alt="Avalanche Logo"
                   width={28}
                   height={28}
                   className="w-7 h-7 object-contain shrink-0"
@@ -198,7 +198,7 @@ export default function Footer() {
                 Every sale receipt and custody handover is stamped with a non-repudiable cryptographic certificate.
               </p>
               <div className="pt-1 border-t border-slate-200/80 dark:border-slate-800 text-[10px] text-slate-500 flex items-center justify-between font-mono">
-                <span>Consensus: IBFT 2.0</span>
+                <span>Consensus: Snowman</span>
                 <span className="text-emerald-600 dark:text-emerald-400 font-semibold">Verified</span>
               </div>
             </div>
@@ -210,12 +210,12 @@ export default function Footer() {
           <div className="flex items-center gap-2 text-[11px]">
             <Image
               src="/logo-icon.svg"
-              alt="Resit"
+              alt="SellerPadi"
               width={20}
               height={20}
               className="w-4 h-4 xl:w-5 xl:h-5 object-contain shrink-0"
             />
-            <span>© {new Date().getFullYear()} Resit. Digital Sales Book &amp; Logistics OS.</span>
+            <span>© {new Date().getFullYear()} SellerPadi. Digital Sales Book &amp; Logistics OS.</span>
           </div>
           <div className="flex items-center gap-5 text-xs font-medium">
             <Link href="/privacy" className="hover:text-slate-900 dark:hover:text-white transition-colors">

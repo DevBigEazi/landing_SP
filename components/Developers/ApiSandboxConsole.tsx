@@ -53,7 +53,7 @@ const defaultConsoleBodies: Record<string, string> = {
   ),
   verify_post: JSON.stringify(
     {
-      innerSecret: "RCVR-59DBE11D",
+      innerSecret: "SP-59DBE11D",
       location: "Lekki Phase 1",
     },
     null,
@@ -62,7 +62,7 @@ const defaultConsoleBodies: Record<string, string> = {
   history_get: "",
   dispute_post: JSON.stringify(
     {
-      innerSecret: "RCVR-59DBE11D",
+      innerSecret: "SP-59DBE11D",
       reason: "Package contents damaged on arrival",
       location: "Lekki Phase 1",
     },
@@ -76,15 +76,15 @@ const defaultConsoleBodies: Record<string, string> = {
 export default function ApiSandboxConsole() {
   const [apiTestKey, setApiTestKey] = useState<string>("");
   const [selectedConsoleEndpoint, setSelectedConsoleEndpoint] = useState<ConsoleEndpoint>("create");
-  const [reqParamId, setReqParamId] = useState<string>("RCV-DEMOPKG123");
+  const [reqParamId, setReqParamId] = useState<string>("SHPT-DEMOPKG123");
   const [reqBodyText, setReqBodyText] = useState<string>(defaultConsoleBodies.create);
   const [isExecutingTest, setIsExecutingTest] = useState(false);
   const [testRespStatus, setTestRespStatus] = useState<number | null>(null);
   const [testRespTime, setTestRespTime] = useState<number | null>(null);
   const [testRespData, setTestRespData] = useState<unknown | null>(null);
 
-  const [lastCreatedTrackingCode, setLastCreatedTrackingCode] = useState<string>("RCV-DEMOPKG123");
-  const [lastCreatedInnerSecret, setLastCreatedInnerSecret] = useState<string>("RCVR-59DBE11D");
+  const [lastCreatedTrackingCode, setLastCreatedTrackingCode] = useState<string>("SHPT-DEMOPKG123");
+  const [lastCreatedInnerSecret, setLastCreatedInnerSecret] = useState<string>("SP-59DBE11D");
 
   // Auto-populate API key if available in sessionStorage
   useEffect(() => {
@@ -109,12 +109,12 @@ export default function ApiSandboxConsole() {
     setTestRespTime(null);
 
     if (ep === "verify_post") {
-      const secret = lastCreatedInnerSecret || "RCVR-59DBE11D";
+      const secret = lastCreatedInnerSecret || "SP-59DBE11D";
       setReqParamId(secret);
       setReqBodyText(JSON.stringify({ innerSecret: secret, location: "Lekki Phase 1" }, null, 2));
     } else if (ep === "dispute_post") {
-      const secret = lastCreatedInnerSecret || "RCVR-59DBE11D";
-      setReqParamId(lastCreatedTrackingCode || "RCV-DEMOPKG123");
+      const secret = lastCreatedInnerSecret || "SP-59DBE11D";
+      setReqParamId(lastCreatedTrackingCode || "SHPT-DEMOPKG123");
       setReqBodyText(
         JSON.stringify(
           {
@@ -133,7 +133,7 @@ export default function ApiSandboxConsole() {
       ep === "history_get" ||
       ep === "shipment_qr"
     ) {
-      setReqParamId(lastCreatedTrackingCode || "RCV-DEMOPKG123");
+      setReqParamId(lastCreatedTrackingCode || "SHPT-DEMOPKG123");
     }
   };
 
@@ -507,7 +507,7 @@ export default function ApiSandboxConsole() {
                 value={reqParamId}
                 onChange={(e) => handleReqParamIdInputChange(e.target.value)}
                 placeholder={
-                  selectedConsoleEndpoint === "verify_post" ? "RST-59DBE11D" : "RST-4A91B2C3E8F0"
+                  selectedConsoleEndpoint === "verify_post" ? "SP-59DBE11D" : "SHPT-4A91B2C3E8F0"
                 }
                 className="w-full bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg px-3 py-1.5 text-xs font-mono text-slate-900 dark:text-white"
               />
@@ -595,7 +595,7 @@ export default function ApiSandboxConsole() {
                         src={
                           (respObj?.qrImageUrl as string) ||
                           `https://api.qrserver.com/v1/create-qr-code/?size=150x150&margin=10&data=${encodeURIComponent(
-                            `https://resit.co/scan/${reqParamId}`
+                            `https://sellerpadi.com/scan/${reqParamId}`
                           )}`
                         }
                         alt="Generated Package QR Code"
@@ -609,14 +609,14 @@ export default function ApiSandboxConsole() {
                           Scan URL:{" "}
                           <code className="text-emerald-400 font-mono font-normal">
                             {(respObj?.scanUrl as string) ||
-                              `https://resit.co/scan/${reqParamId}`}
+                              `https://sellerpadi.com/scan/${reqParamId}`}
                           </code>
                         </p>
                         <a
                           href={
                             (respObj?.qrImageUrl as string) ||
                             `https://api.qrserver.com/v1/create-qr-code/?size=300x300&margin=10&data=${encodeURIComponent(
-                              `https://resit.co/scan/${reqParamId}`
+                              `https://sellerpadi.com/scan/${reqParamId}`
                             )}`
                           }
                           target="_blank"

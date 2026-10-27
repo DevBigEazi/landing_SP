@@ -46,32 +46,32 @@ response = requests.post(url, json=payload, headers=headers)
 print(response.json())`,
   },
   getQrCode: {
-    curl: `curl -X GET "https://app-SellerPadi.vercel.app/api/v1/shipments/RST-8F912A3B4C5D/qr?format=json"`,
-    javascript: `const res = await fetch('https://app-SellerPadi.vercel.app/api/v1/shipments/RST-8F912A3B4C5D/qr?format=json');
+    curl: `curl -X GET "https://app-SellerPadi.vercel.app/api/v1/shipments/SHPT-8F912A3B4C5D/qr?format=json"`,
+    javascript: `const res = await fetch('https://app-SellerPadi.vercel.app/api/v1/shipments/SHPT-8F912A3B4C5D/qr?format=json');
 const qrData = await res.json();
 console.log('QR Code Image Link:', qrData.qrImageUrl); // PNG format for labels
 console.log('Public Verification Scan Link:', qrData.scanUrl);`,
     python: `import requests
 
-res = requests.get("https://app-SellerPadi.vercel.app/api/v1/shipments/RST-8F912A3B4C5D/qr?format=json")
+res = requests.get("https://app-SellerPadi.vercel.app/api/v1/shipments/SHPT-8F912A3B4C5D/qr?format=json")
 print(res.json())`,
   },
   verifyShipment: {
-    curl: `curl -X GET "https://app-SellerPadi.vercel.app/api/v1/shipments/RST-8F912A3B4C5D/verify"`,
-    javascript: `const res = await fetch('https://app-SellerPadi.vercel.app/api/v1/shipments/RST-8F912A3B4C5D/verify');
+    curl: `curl -X GET "https://app-SellerPadi.vercel.app/api/v1/shipments/SHPT-8F912A3B4C5D/verify"`,
+    javascript: `const res = await fetch('https://app-SellerPadi.vercel.app/api/v1/shipments/SHPT-8F912A3B4C5D/verify');
 const packageData = await res.json();
 console.log('Package Status:', packageData.status); // InTransit | Delivered | Disputed`,
     python: `import requests
 
-res = requests.get("https://app-SellerPadi.vercel.app/api/v1/shipments/RST-8F912A3B4C5D/verify")
+res = requests.get("https://app-SellerPadi.vercel.app/api/v1/shipments/SHPT-8F912A3B4C5D/verify")
 print(res.json())`,
   },
   handoverShipment: {
-    curl: `curl -X POST "https://app-SellerPadi.vercel.app/api/v1/shipments/RST-8F912A3B4C5D/handover" \\
+    curl: `curl -X POST "https://app-SellerPadi.vercel.app/api/v1/shipments/SHPT-8F912A3B4C5D/handover" \\
   -H "Authorization: Bearer rst_live_8f921a4b901e23f..." \\
   -H "Content-Type: application/json" \\
   -d '{ "riderName": "John Rider", "riderPhone": "+2348011223344", "location": "Ikeja Hub, Lagos" }'`,
-    javascript: `const res = await fetch('https://app-SellerPadi.vercel.app/api/v1/shipments/RST-8F912A3B4C5D/handover', {
+    javascript: `const res = await fetch('https://app-SellerPadi.vercel.app/api/v1/shipments/SHPT-8F912A3B4C5D/handover', {
   method: 'POST',
   headers: {
     'Authorization': 'Bearer rst_live_8f921a4b901e23f...',
@@ -84,67 +84,67 @@ console.log('Handover Status:', result.shipment.status);`,
     python: `import requests
 
 res = requests.post(
-    "https://app-SellerPadi.vercel.app/api/v1/shipments/RST-8F912A3B4C5D/handover",
+    "https://app-SellerPadi.vercel.app/api/v1/shipments/SHPT-8F912A3B4C5D/handover",
     headers={"Authorization": "Bearer rst_live_8f921a4b901e23f..."},
     json={"riderName": "John Rider", "riderPhone": "+2348011223344", "location": "Ikeja Hub, Lagos"}
 )
 print(res.json())`,
   },
   confirmDelivery: {
-    curl: `curl -X POST "https://app-SellerPadi.vercel.app/api/v1/shipments/RST-8F912A3B4C5D/verify" \\
+    curl: `curl -X POST "https://app-SellerPadi.vercel.app/api/v1/shipments/SHPT-8F912A3B4C5D/verify" \\
   -H "Authorization: Bearer rst_live_8f921a4b901e23f..." \\
   -H "Content-Type: application/json" \\
-  -d '{ "innerSecret": "RST-A8F2B1C0", "location": "Lekki, Lagos" }'`,
-    javascript: `const res = await fetch('https://app-SellerPadi.vercel.app/api/v1/shipments/RST-8F912A3B4C5D/verify', {
+  -d '{ "innerSecret": "SP-A8F2B1C0", "location": "Lekki, Lagos" }'`,
+    javascript: `const res = await fetch('https://app-SellerPadi.vercel.app/api/v1/shipments/SHPT-8F912A3B4C5D/verify', {
   method: 'POST',
   headers: {
     'Authorization': 'Bearer rst_live_8f921a4b901e23f...',
     'Content-Type': 'application/json'
   },
-  body: JSON.stringify({ innerSecret: 'RST-A8F2B1C0', location: 'Lekki, Lagos' })
+  body: JSON.stringify({ innerSecret: 'SP-A8F2B1C0', location: 'Lekki, Lagos' })
 });
 const result = await res.json();
 console.log('Delivery Verified:', result.shipment.status);`,
     python: `import requests
 
 res = requests.post(
-    "https://app-SellerPadi.vercel.app/api/v1/shipments/RST-8F912A3B4C5D/verify",
+    "https://app-SellerPadi.vercel.app/api/v1/shipments/SHPT-8F912A3B4C5D/verify",
     headers={"Authorization": "Bearer rst_live_8f921a4b901e23f..."},
-    json={"innerSecret": "RST-A8F2B1C0", "location": "Lekki, Lagos"}
+    json={"innerSecret": "SP-A8F2B1C0", "location": "Lekki, Lagos"}
 )
 print(res.json())`,
   },
   historyShipment: {
-    curl: `curl -X GET "https://app-SellerPadi.vercel.app/api/v1/shipments/RST-8F912A3B4C5D/history"`,
-    javascript: `const res = await fetch('https://app-SellerPadi.vercel.app/api/v1/shipments/RST-8F912A3B4C5D/history');
+    curl: `curl -X GET "https://app-SellerPadi.vercel.app/api/v1/shipments/SHPT-8F912A3B4C5D/history"`,
+    javascript: `const res = await fetch('https://app-SellerPadi.vercel.app/api/v1/shipments/SHPT-8F912A3B4C5D/history');
 const history = await res.json();
 console.log('Custody Timeline Events:', history.events);`,
     python: `import requests
 
-res = requests.get("https://app-SellerPadi.vercel.app/api/v1/shipments/RST-8F912A3B4C5D/history")
+res = requests.get("https://app-SellerPadi.vercel.app/api/v1/shipments/SHPT-8F912A3B4C5D/history")
 print(res.json())`,
   },
   disputeShipment: {
-    curl: `curl -X POST "https://app-SellerPadi.vercel.app/api/v1/shipments/RST-8F912A3B4C5D/dispute" \\
+    curl: `curl -X POST "https://app-SellerPadi.vercel.app/api/v1/shipments/SHPT-8F912A3B4C5D/dispute" \\
   -H "Authorization: Bearer rst_live_8f921a4b901e23f..." \\
   -H "Content-Type: application/json" \\
-  -d '{ "innerSecret": "RST-A8F2B1C0", "reason": "Damaged contents on arrival", "location": "Lagos" }'`,
-    javascript: `const res = await fetch('https://app-SellerPadi.vercel.app/api/v1/shipments/RST-8F912A3B4C5D/dispute', {
+  -d '{ "innerSecret": "SP-A8F2B1C0", "reason": "Damaged contents on arrival", "location": "Lagos" }'`,
+    javascript: `const res = await fetch('https://app-SellerPadi.vercel.app/api/v1/shipments/SHPT-8F912A3B4C5D/dispute', {
   method: 'POST',
   headers: {
     'Authorization': 'Bearer rst_live_8f921a4b901e23f...',
     'Content-Type': 'application/json'
   },
-  body: JSON.stringify({ innerSecret: 'RST-A8F2B1C0', reason: 'Damaged contents on arrival', location: 'Lagos' })
+  body: JSON.stringify({ innerSecret: 'SP-A8F2B1C0', reason: 'Damaged contents on arrival', location: 'Lagos' })
 });
 const result = await res.json();
 console.log('Dispute Logged:', result.success);`,
     python: `import requests
 
 res = requests.post(
-    "https://app-SellerPadi.vercel.app/api/v1/shipments/RST-8F912A3B4C5D/dispute",
+    "https://app-SellerPadi.vercel.app/api/v1/shipments/SHPT-8F912A3B4C5D/dispute",
     headers={"Authorization": "Bearer rst_live_8f921a4b901e23f..."},
-    json={"innerSecret": "RST-A8F2B1C0", "reason": "Damaged contents on arrival", "location": "Lagos"}
+    json={"innerSecret": "SP-A8F2B1C0", "reason": "Damaged contents on arrival", "location": "Lagos"}
 )
 print(res.json())`,
   },
@@ -175,11 +175,11 @@ res = requests.get(
 print(res.json())`,
   },
   editShipment: {
-    curl: `curl -X PATCH "https://app-SellerPadi.vercel.app/api/v1/shipments/RST-8F912A3B4C5D" \\
+    curl: `curl -X PATCH "https://app-SellerPadi.vercel.app/api/v1/shipments/SHPT-8F912A3B4C5D" \\
   -H "Authorization: Bearer rst_live_8f921a4b901e23f..." \\
   -H "Content-Type: application/json" \\
   -d '{ "packageName": "Updated Parcel Name", "receiverPhone": "+2348099887766", "destination": "Lekki Phase 1" }'`,
-    javascript: `const res = await fetch('https://app-SellerPadi.vercel.app/api/v1/shipments/RST-8F912A3B4C5D', {
+    javascript: `const res = await fetch('https://app-SellerPadi.vercel.app/api/v1/shipments/SHPT-8F912A3B4C5D', {
   method: 'PATCH',
   headers: {
     'Authorization': 'Bearer rst_live_8f921a4b901e23f...',
@@ -192,7 +192,7 @@ console.log('Updated:', result.success);`,
     python: `import requests
 
 res = requests.patch(
-    "https://app-SellerPadi.vercel.app/api/v1/shipments/RST-8F912A3B4C5D",
+    "https://app-SellerPadi.vercel.app/api/v1/shipments/SHPT-8F912A3B4C5D",
     headers={"Authorization": "Bearer rst_live_8f921a4b901e23f..."},
     json={"packageName": "Updated Parcel Name", "receiverPhone": "+2348099887766", "destination": "Lekki Phase 1"}
 )
@@ -204,7 +204,7 @@ export const webhookPayloadExample = `{
   "event": "shipment.delivered",
   "timestamp": "2026-08-03T14:30:00Z",
   "data": {
-    "packageId": "RST-8F912A3B4C5D",
+    "packageId": "SHPT-8F912A3B4C5D",
     "companyName": "Big Eazi Logistics",
     "shipperAddress": "0x6e799abd05b044acb6d9a59605de21ec845c2180",
     "packageName": "iPhone 15 Pro Dispatch",

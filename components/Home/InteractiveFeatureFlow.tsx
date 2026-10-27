@@ -289,7 +289,7 @@ export default function InteractiveFeatureFlow() {
 
               <div className="text-xs text-slate-600 dark:text-slate-400 space-y-1">
                 <p className="font-bold text-slate-900 dark:text-white">
-                  Slip #RST-84920 · Apex Electronics Store
+                  Slip #SP-REC-84920 · Apex Electronics Store
                 </p>
                 <p className="text-[11px] font-mono text-emerald-600 dark:text-emerald-400">
                   Status: Paid in Full · Immutable Sale Proof

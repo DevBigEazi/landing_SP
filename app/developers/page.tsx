@@ -36,7 +36,7 @@ export default function DevelopersPage() {
       icon: <Package className="w-5 h-5 xl:w-6 xl:h-6 text-emerald-600 dark:text-emerald-400" />,
       title: "Register Your First Dispatch",
       description:
-        "Call POST /api/v1/shipments/create with your API key in the Authorization header. The response returns a unique packageId, consumer trackingCode, RST-prefixed handover secret (innerSecret), and shipment record.",
+        "Call POST /api/v1/shipments/create with your API key in the Authorization header. The response returns a unique packageId, consumer trackingCode, SP-prefixed handover secret (innerSecret), and shipment record.",
       action: "See Code Example ↓",
       actionHref: "#endpoints",
       isExternal: false,

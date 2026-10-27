@@ -8,25 +8,19 @@ import { sharedOpenGraph, getMetadataBaseUrl } from "@/lib/metadata";
 const inter = Inter({
   variable: "--font-sans",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
   display: "swap",
-  preload: false,
 });
 
 const sora = Sora({
   variable: "--font-display",
   subsets: ["latin"],
-  weight: ["600", "700"],
   display: "swap",
-  preload: false,
 });
 
 const jetbrainsMono = JetBrains_Mono({
   variable: "--font-mono",
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
   display: "swap",
-  preload: false,
 });
 
 export const viewport: Viewport = {

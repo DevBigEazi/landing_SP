@@ -54,7 +54,7 @@ const STEPS: StepDetail[] = [
     badge: "Tamperproof Proof",
     title: "Audit Trail Stamped & Dispatches Protected",
     description:
-      "Every sale receives an immutable audit seal. For parcels and courier deliveries, generate dual-layer shipping labels with secret scratch-off handover PINs.",
+      "Every sale receives an immutable audit seal. For parcels and rider deliveries, generate dual-layer shipping labels with secret scratch-off handover PINs.",
     actor: "Store Manager & Logistics",
     keyBenefit: "Anti-void theft protection · Dispatch handover PIN · No chargebacks",
   },
@@ -344,7 +344,7 @@ export default function InteractiveFeatureFlow() {
               </div>
 
               <p className="text-xs text-slate-600 dark:text-slate-400">
-                The buyer reveals their secret scratch PIN only after inspecting the package physically. Handing this PIN to the courier proves genuine custody handover.
+                The buyer reveals their secret scratch PIN only after inspecting the package physically. Handing this PIN to the dispatch rider proves genuine custody handover.
               </p>
 
               {/* Secret Handover PIN Display */}

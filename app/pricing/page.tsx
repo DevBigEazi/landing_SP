@@ -60,14 +60,14 @@ export default function PricingPage() {
                       {freeTier.name}
                     </span>
                     <span className="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 text-[10px] sm:text-xs font-bold px-2.5 py-0.5 rounded-full">
-                      Solo CEO
+                      CEO + 1 HQ Staff
                     </span>
                   </div>
 
                   {/* Switcher Alignment Spacer / Baseline Tag */}
                   <div className="bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-800 rounded-xl p-2 xl:p-2.5 flex items-center justify-center text-center">
                     <span className="text-[11px] sm:text-xs xl:text-sm font-bold text-slate-600 dark:text-slate-300">
-                      100 Ops (Single-User Pilot)
+                      100 Ops (Single Branch Pilot)
                     </span>
                   </div>
 
@@ -109,7 +109,7 @@ export default function PricingPage() {
                       <div className="leading-tight">
                         <span className="font-semibold text-slate-900 dark:text-white">{freeTier.skus} Inventory Items</span>
                         <span className="block text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 mt-0.5">
-                          Product catalog &amp; quick-pick presets
+                          Daily, weekly &amp; monthly PDF reports
                         </span>
                       </div>
                     </div>
@@ -118,31 +118,31 @@ export default function PricingPage() {
                     <div className="flex items-start gap-2.5">
                       <Check className="w-4 h-4 xl:w-5 xl:h-5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                       <div className="leading-tight">
-                        <span className="font-semibold text-slate-900 dark:text-white">0 Branches</span>
+                        <span className="font-semibold text-slate-900 dark:text-white">Headquarters Store</span>
                         <span className="block text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 mt-0.5">
-                          Headquarters only
+                          Main store branch included
                         </span>
                       </div>
                     </div>
 
-                    {/* Branch Managers */}
+                    {/* Branch Staff Allowance */}
                     <div className="flex items-start gap-2.5">
                       <Check className="w-4 h-4 xl:w-5 xl:h-5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                       <div className="leading-tight">
-                        <span className="font-semibold text-slate-900 dark:text-white">No Branch Manager</span>
+                        <span className="font-semibold text-slate-900 dark:text-white">1 HQ Staff Member</span>
                         <span className="block text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 mt-0.5">
-                          CEO direct oversight
+                          1 Manager or Sales Rep at Headquarters
                         </span>
                       </div>
                     </div>
 
-                    {/* Sales Reps */}
+                    {/* Scoping Privacy */}
                     <div className="flex items-start gap-2.5">
                       <Check className="w-4 h-4 xl:w-5 xl:h-5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                       <div className="leading-tight">
-                        <span className="font-semibold text-slate-900 dark:text-white">0 Sales Reps</span>
+                        <span className="font-semibold text-slate-900 dark:text-white">Role-Scoped Privacy</span>
                         <span className="block text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 mt-0.5">
-                          CEO handles all store sales
+                          Staff only see their sales; CEO sees all
                         </span>
                       </div>
                     </div>
@@ -153,7 +153,7 @@ export default function PricingPage() {
                       <div className="leading-tight">
                         <span className="font-semibold text-slate-900 dark:text-white">Hard Monthly Limit</span>
                         <span className="block text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 mt-0.5">
-                          Strict 100 ops cap · CEO only
+                          Strict 100 ops cap · Upgrade to expand
                         </span>
                       </div>
                     </div>
@@ -250,7 +250,7 @@ export default function PricingPage() {
                           {growthTier.skus.toLocaleString()} Inventory Items
                         </span>
                         <span className="block text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 mt-0.5">
-                          Multi-branch catalog &amp; real-time sales sync
+                          Multi-branch catalog &amp; periodic valuation PDF reports
                         </span>
                       </div>
                     </div>
@@ -397,7 +397,7 @@ export default function PricingPage() {
                           {scaleTier.skus === 0 ? "Unlimited Inventory Items" : `${scaleTier.skus.toLocaleString()} Inventory Items`}
                         </span>
                         <span className="block text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 mt-0.5">
-                          Multi-store replenishment &amp; stock transfers
+                          Multi-store replenishment &amp; periodic valuation PDF reports
                         </span>
                       </div>
                     </div>
@@ -529,6 +529,20 @@ export default function PricingPage() {
                 <h4 className="font-bold text-slate-900 dark:text-white text-sm sm:text-base xl:text-lg">How are extra branches and sales reps handled?</h4>
                 <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
                   You can expand beyond your plan&apos;s base limits at any time. Extra branches and extra sales reps are billed at {branchStaffOverageFeeFormatted} each, while strictly maintaining the rule of 1 manager per branch.
+                </p>
+              </div>
+
+              <div className="space-y-2 xl:space-y-3">
+                <h4 className="font-bold text-slate-900 dark:text-white text-sm sm:text-base xl:text-lg">Can I add staff on the Free tier?</h4>
+                <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                  Yes! The Free plan allows you to assign 1 staff member (a Branch Manager or Sales Representative) to your Headquarters. Headquarters staff can only view records and sales directly attached to them, while the CEO retains complete global visibility across all store operations.
+                </p>
+              </div>
+
+              <div className="space-y-2 xl:space-y-3">
+                <h4 className="font-bold text-slate-900 dark:text-white text-sm sm:text-base xl:text-lg">Can I export official inventory and valuation reports?</h4>
+                <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                  Yes! You can generate accountant-grade A4 vector PDF inventory reports across Daily, Weekly, Monthly, or Yearly periods, complete with store portfolio valuations, stock movements, and itemized SKUs.
                 </p>
               </div>
 

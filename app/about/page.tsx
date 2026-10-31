@@ -20,7 +20,7 @@ export default function AboutPage() {
     {
       num: "02",
       title: "Multi-Branch Inventory & Stock Control",
-      desc: "Manage product catalogs, track stock per retail branch, and execute inter-branch transfers with unique transfer references. Counter checkouts auto-deplete store inventory in real time, and audit voids restore stock safely.",
+      desc: "Manage product catalogs, track stock per retail branch, execute inter-branch transfers with unique transfer references, and export periodic valuation PDF reports (Daily, Weekly, Monthly, Yearly). Counter checkouts auto-deplete store inventory in real time, and audit voids restore stock safely.",
     },
     {
       num: "03",
@@ -30,7 +30,7 @@ export default function AboutPage() {
     {
       num: "04",
       title: "Multi-Branch Operations & Team Roles",
-      desc: "Collaborate seamlessly across multiple retail shops. Invite branch managers and sales reps via email with 6-digit PIN logins. Track sales rep performance per branch while keeping financial bookkeeping private.",
+      desc: "Collaborate seamlessly across multiple retail shops or pilot with 1 staff member at Headquarters on our Free tier. Invite branch managers and sales reps via email with 6-digit PIN logins, keeping records role-scoped so staff only see what is attached to them.",
     },
     {
       num: "05",

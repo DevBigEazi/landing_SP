@@ -253,10 +253,10 @@ export const PLAN_TIERS: Record<string, PlanTierConfig> = {
     ngnMonthly: 0,
     quota: 100,
     branches: 0,
-    salesReps: 0,
-    managers: 0,
+    salesReps: 1,
+    managers: 1,
     skus: 25,
-    description: "CEO only · 25 items · 100 dispatches & receipts",
+    description: "CEO + 1 HQ Staff · 25 items · 100 dispatches & receipts",
   },
   starter_500: {
     id: "starter_500",

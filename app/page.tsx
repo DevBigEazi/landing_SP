@@ -247,6 +247,10 @@ export default function Home() {
                       <span className="h-1.5 w-1.5 rounded-full bg-teal-600 shrink-0" />
                       <span>Low-stock alerts &amp; branch-isolated stock lock</span>
                     </li>
+                    <li className="flex items-center gap-2">
+                      <span className="h-1.5 w-1.5 rounded-full bg-teal-600 shrink-0" />
+                      <span>Periodic inventory PDF reports (Daily, Weekly, Monthly, Yearly)</span>
+                    </li>
                   </ul>
                 </div>
                 <div className="pt-4 border-t border-slate-200/80 dark:border-slate-800">
@@ -320,12 +324,16 @@ export default function Home() {
                     </h3>
                   </div>
                   <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                    Scale across retail stores. Invite branch managers and sales reps via email with 6-digit PIN logins, keeping financial records confidential.
+                    Scale across retail stores. Invite branch managers and sales reps via email with 6-digit PIN logins, with Free tier HQ staff pilot and role-scoped privacy boundaries.
                   </p>
                   <ul className="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-400">
                     <li className="flex items-center gap-2">
                       <span className="h-1.5 w-1.5 rounded-full bg-slate-600 shrink-0" />
-                      <span>Owner, Branch Manager &amp; Sales Rep roles</span>
+                      <span>Free tier pilot: 1 Manager or Sales Rep at Headquarters</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="h-1.5 w-1.5 rounded-full bg-slate-600 shrink-0" />
+                      <span>Role-scoped privacy: staff only see their own records; CEO sees all</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <span className="h-1.5 w-1.5 rounded-full bg-slate-600 shrink-0" />
